@@ -1,4 +1,4 @@
-const router = require("express").Router();
+const  router = require("express").Router();
 const fs = require("fs");
 const crypto = require("crypto");
 
@@ -27,9 +27,10 @@ const createId = (length) => {
     return crypto.randomBytes(length).toString("hex");
 }
 
+
 //Routes
 router.get("/", (req, res) => {
-    const videos = getVideos();
+    const videos = getVideos(); // channel, id ,image 4 properties
     res.status(200).json(videos);
 })
 

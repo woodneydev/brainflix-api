@@ -9,6 +9,8 @@ const videos = require("./routes/videos")
 // app.use(cors({origin: ORIGIN}));
 app.use(cors({origin: "*"}));
 
+app.use(express.static("./public"))
+
 app.use(express.json());
 
 app.use("/videos", videos);
